@@ -5,7 +5,7 @@
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $input = $_POST["input"];
         $answer = md5($input);
-        if ($answer == $secret && $answer !== $secret) {
+        if ($answer === $secret ) {
             echo "<script>alert('Password Correct')</script>";
             echo "$flag";
         } else {
